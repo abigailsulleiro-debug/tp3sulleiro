@@ -23,6 +23,9 @@ function uno() {
         }
     }
 }
+
+
+
 function ej2() {
     let positivos = 0;
     let negativos = 0;
@@ -70,6 +73,8 @@ function dos() {
     console.log("Positivos: " + positivos + ", Negativos: " + negativos + ", Ceros: " + ceros);
     alert("Positivos: " + positivos + ", Negativos: " + negativos + ", Ceros: " + ceros);
 }
+
+
 
 
 function ej3() {
@@ -120,6 +125,10 @@ function tres() {
         alert("No se ingresaron numeros positivos");
     }
 }
+
+
+
+
 function ej4() {
     // Solicitar 5 edades e indicar cuantos son mayores de edad.
     //  Si la edad es mayor a 65, contarla en un grupo especialo. Usar for.
@@ -164,8 +173,11 @@ function cuatro() {
     }
     console.log("Total de mayores de edad: " + mayoredad);
     console.log("Total en grupo especial (>65): " + especial);
-
 }
+
+
+
+
 function ej5() {
     //mostrar los numeros del 1 al 50.
     //  Indicar ademas cuantos son multiplos de 3 y cuantos de 5. Usar for.
@@ -183,6 +195,9 @@ function ej5() {
 }
 console.log("Los multiplos de 3 son: " + multiplos3);
 console.log("Los multiplos de 5 son: " + multiplos5);
+
+
+
 
 function ej6() {
     //ingresar numeros hasta que se ingrese uno mayor a 100.
@@ -208,14 +223,22 @@ function ej6() {
     let suma = 0
     do {
         numero = parseInt(prompt("ingrese numeros"));
-        suma = suma + numero;
-        contador++;
-     } while (isNaN(num)) 
+        
+     while (isNaN(num)) {
         alert("Ingreso invalido. Por favor ingrese un numero");
         num = parseFloat(prompt("Ingrese un numero (negativo para finalizar):"))
-    } while (numero <= 100)
+     }
+     if(numero<=100) {
+    suma+=numero;
+    contador++;
+     }
+    } while (numero <= 100);
     console.log("se ingresaron:" + contador);
     console.log("la suma es:" + suma);
+
+
+
+}
     function ej7() {
         //Pedir 10 numeros e informar el mayor y el menor. Usar for 
         let num = parseFloat(prompt("Ingrese 10 numeros"));
@@ -234,6 +257,28 @@ function ej6() {
         }
 
         alert("El max es: " + max + " El min es: + " + min);
+
+        function siete() {
+        //Pedir 10 numeros e informar el mayor y el menor. Usar for 
+        let num = parseFloat(prompt("Ingrese 10 numeros"));
+        let max = num
+        let min = num
+
+        for (let i = 0; i < 9; i++) {
+            num = parseFloat(prompt("Ingrese 10 numeros"));
+
+            if (num > max) {
+                max = num;
+            }
+            if (num < min) {
+                min = num;
+            }
+        }
+
+        alert("El max es: " + max + " El min es: + " + min);
+    }
+
+
 
     function ej8() {
         //Solicitar numeros hasta ingresar un  numero negativo.
